@@ -157,11 +157,21 @@ input:invalid{
     box-shadow: 0px 0px 3px red;
 }
 
-input:valid{
+/* input:valid{
     border: 1px solid green;
-}
+} */
 
-#password, #confirm-password{
+.not-valid{
     border: 1px solid red;
     box-shadow: 0px 0px 3px red;
+}
+
+.not-valid:focus{
+    border: 1px solid red;
+    box-shadow: 0 0 3px red;
+}
+
+.valid{
+    border: 1px solid green !important;
+    box-shadow: 0px 0px 3px green !important; 
 }
