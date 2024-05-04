@@ -14,12 +14,16 @@ confirmPassInput.onkeyup = () => {
 
 passwordInput.onkeyup = () => {
     const pass = passwordInput.value;
-    const regex = '/\d/';
-    if(pass.length > 7){
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+/;
+    if(pass.length > 7 && pass.match(regex)){
+        console.log("inside condition");
         passwordInput.classList.add("valid");
     }
-
-    if(pass.match(regex)){
-        console.log("Matcheessss!");
+    else{
+        passwordInput.classList.remove("valid");
     }
 }
+
+
+// const pattern = /.*[0-9].*/;
+// console.log(pattern.test("abc123")); 
